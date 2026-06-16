@@ -5,7 +5,7 @@
 from datetime import datetime
 
 
-def get_days_from_today(date):
+def get_days_start_from_today(date):
     """
     Розраховує кількість днів між заданою датою і поточною датою.
 
@@ -20,7 +20,7 @@ def get_days_from_today(date):
         ValueError: Якщо формат дати неправильний.
 
     Examples:
-        >>> get_days_from_today("2021-10-09")  # якщо сьогодні 2021-05-05
+        >>> get_days_start_from_today("2021-10-09")  # якщо сьогодні 2021-05-05
         -157
     """
     try:
@@ -48,14 +48,14 @@ if __name__ == "__main__":
 
     # Приклад 1: Дата в минулому
     try:
-        result = get_days_from_today("2020-10-09")
+        result = get_days_start_from_today("2020-10-09")
         print(f"Від '2020-10-09' до сьогодні: {result} днів")
     except Exception as e:
         print(f"Помилка: {e}")
 
     # Приклад 2: Дата в майбутньому
     try:
-        result = get_days_from_today("2027-12-31")
+        result = get_days_start_from_today("2027-12-31")
         print(f"Від '2027-12-31' до сьогодні: {result} днів (від'ємне значення, бо дата в майбутньому)")
     except Exception as e:
         print(f"Помилка: {e}")
@@ -63,14 +63,14 @@ if __name__ == "__main__":
     # Приклад 3: Сьогоднішня дата
     try:
         today_str = datetime.today().strftime('%Y-%m-%d')
-        result = get_days_from_today(today_str)
+        result = get_days_start_from_today(today_str)
         print(f"Від сьогодні до сьогодні: {result} днів")
     except Exception as e:
         print(f"Помилка: {e}")
 
     # Приклад 4: Неправильний формат (обробка винятку)
     try:
-        result = get_days_from_today("09-10-2020")
+        result = get_days_start_from_today("09-10-2020")
         print(f"Результат: {result}")
     except ValueError as e:
         print(f"Помилка: {e}")
