@@ -3,7 +3,7 @@
 """
 
 from datetime import datetime
-from task1 import get_days_start_from_today
+from task1 import get_days_from_today
 from task2 import get_numbers_ticket
 from task3 import normalize_phone
 from task4 import get_upcoming_birthdays
@@ -18,8 +18,8 @@ def main():
 
     # Приклад використання task1
     print("\nПриклади використання get_days_from_today():")
-    print(f"  Від '2020-10-09' до сьогодні: {get_days_start_from_today('2020-10-09')} днів")
-    print(f"  Від '2027-12-31' до сьогодні: {get_days_start_from_today('2027-12-31')} днів")
+    print(f"  Від '2020-10-09' до сьогодні: {get_days_from_today('2020-10-09')} днів")
+    print(f"  Від '2027-12-31' до сьогодні: {get_days_from_today('2027-12-31')} днів")
 
     print("\n" + "=" * 70)
     print("ЗАВДАННЯ 2: Генератор лотерейних чисел")
